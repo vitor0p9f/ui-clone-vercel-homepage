@@ -2,7 +2,7 @@
 UI Clone #17 - Vercel (Homepage)
 </h1>
 
-<p align="center"><a href="https://vercel.com/home">Vercel Homepage</a> - UI clone for study purposes.</p>
+<p align="center">Vercel Homepage - UI clone for study purposes.</p>
 
 <hr>
 
