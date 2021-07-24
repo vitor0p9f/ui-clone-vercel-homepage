@@ -1,0 +1,51 @@
+header {
+  max-width: 104.8rem;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center; // Later
+  padding: 1.6rem 1.5rem; // Later
+
+  .left {
+    height: 2.6rem;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    
+    li{
+      & + li{
+        margin-left: 0.75rem;
+      }
+
+      a {
+        font-size: 1.4rem;
+        padding: 0.8rem;
+        color: var(--gray);
+        text-decoration: none;
+  
+        &:hover{
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+      margin-left: 0.8rem;
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+}
