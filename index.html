@@ -19,29 +19,31 @@
 
   <body>
     <div id="wrapper">
-      <header>
-        <h1 class="left">
-          <img src="assets/logo.svg" alt="Logo" />
-        </h1>
+      <header id="transparent-header">
+        <div class="content">
+          <h1 class="left">
+            <img src="assets/logo.svg" alt="Logo" />
+          </h1>
 
-        <nav class="middle">
-          <ul>
-            <li><a href="#">Templates</a></li>
-            <li><a href="#">Integrations</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Customers</a></li>
-            <li><a href="#">Pricing</a></li>
-          </ul>
-        </nav>
+          <nav class="middle">
+            <ul>
+              <li><a href="#">Templates</a></li>
+              <li><a href="#">Integrations</a></li>
+              <li><a href="#">Analytics</a></li>
+              <li><a href="#">Customers</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </nav>
 
-        <div class="right">
-          <ul>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Docs</a></li>
-          </ul>
+          <div class="right">
+            <ul class="options">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Docs</a></li>
+            </ul>
 
-          <!-- https://getavataaars.com/ -->
-          <img class="avatar" src="assets/avatar.svg" alt="Avatar" />
+            <!-- https://getavataaars.com/ -->
+            <img class="avatar" src="assets/avatar.svg" alt="Avatar" />
+          </div>
         </div>
       </header>
 
@@ -67,4 +69,13 @@
       <footer>Explore the Vercel way</footer>
     </div>
   </body>
+  <script>
+    const headerElement = document.getElementById("transparent-header");
+
+    window.addEventListener("scroll", function () {
+      headerElement.classList[window.scrollY > 20 ? "add" : "remove"](
+        "scrolled"
+      );
+    });
+  </script>
 </html>

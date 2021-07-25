@@ -8,6 +8,7 @@ main{
   align-items: center;
   justify-content: center;
   padding: 5.6rem 2.4rem;
+  margin-top: 6.4rem;
 
   h1{
     display: flex;
@@ -17,7 +18,7 @@ main{
 
     font-size: 16rem;
     line-height: 16rem;
-    letter-spacing: -1.24rem;
+    letter-spacing: -1rem;
     color: var(--white);
 
     span{
@@ -72,7 +73,6 @@ main{
         background: transparent;
         color: var(--gray);
         border: 0.1rem solid var(--gray);
-
       }
 
       &:hover{
