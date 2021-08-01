@@ -136,8 +136,35 @@ header.scrolled .right .options {
   opacity: 0;
 }
 
+@media (max-width: 940px) {
+  header .middle, header .right .options, header .right .avatar {
+    display: none;
+  }
+  header .right .menuIcon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.6rem;
+  }
+  header .right .menuIcon span {
+    width: 2.2rem;
+    height: 0.1rem;
+    background-color: white;
+    margin: 0.4rem 0;
+  }
+}
+
 main {
-  max-width: 104.8rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,7 +200,7 @@ main h1 {
   text-align: center;
   font-size: 16rem;
   line-height: 16rem;
-  letter-spacing: -1rem;
+  letter-spacing: -0.06em;
   color: var(--white);
 }
 
@@ -205,6 +232,20 @@ main h1 span:nth-child(3) {
   background-image: linear-gradient(90deg, #ff4d4d, #f9cb28);
   -webkit-animation-delay: 6.66s;
           animation-delay: 6.66s;
+}
+
+@media (max-width: 1200px) {
+  main h1 {
+    font-size: 13rem;
+    line-height: 13rem;
+  }
+}
+
+@media (max-width: 720px) {
+  main h1 {
+    font-size: 23vw;
+    line-height: 1;
+  }
 }
 
 main .buttonsContainer {
@@ -244,6 +285,22 @@ main .buttonsContainer > button:hover {
   background: transparent;
   color: var(--white);
   border: 0.1rem solid var(--white);
+}
+
+@media (max-width: 720px) {
+  main .buttonsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  main .buttonsContainer > button {
+    width: 100%;
+  }
 }
 
 main h2 {

@@ -1,33 +1,33 @@
 header {
   width: 100%;
-
+  
   position: fixed;
   z-index: 1;
   top: 0;
-
+  
   display: flex;
   justify-content: center;
-
+  
   background-color: rgba(0, 0, 0, 0.5);
-
+  
   .content{
     max-width: 104.8rem;
     width: 100%;
-
+    
     margin: 0 1.34rem;
     padding: 1.6rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     .left {
       height: 2.6rem;
-  
+      
       img {
         height: 100%;
       }
     }
-  
+    
     ul {
       display: flex;
       align-items: center;
@@ -37,24 +37,24 @@ header {
         & + li{
           margin-left: 0.75rem;
         }
-  
+        
         a {
           font-size: 1.4rem;
           padding: 0.8rem;
           color: var(--gray);
           text-decoration: none;
-    
+          
           &:hover{
             color: var(--white);
           }
         }
       }
     }
-  
+    
     .right {
       display: flex;
       align-items: center;
-  
+      
       .avatar {
         margin-left: 0.8rem;
         width: 3.2rem;
@@ -62,20 +62,43 @@ header {
       }
     }
   }
+  
+  // This style will be applied when user scrolls the screen
+  &.scrolled{
+    box-shadow: inset 0 -0.1rem 0 0 hsla(0, 0%, 100%, 0.1);
+    
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+    
+    .middle{
+      opacity: 0;
+    }
+    
+    .right .options{
+      opacity: 0;
+    }
+  }
+  
+  @media (max-width: 940px){
+    .middle, .right .options, .right .avatar{
+      display: none;
+    }
+    
+    .right .menuIcon{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      padding: 0.6rem;
+
+      span{
+        width: 2.2rem;
+        height: 0.1rem;
+        background-color: white;
+        margin: 0.4rem 0;
+      }
+    }
+  }
 }
 
-// This style will be applied when user scrolls the screen
-header.scrolled{
-  box-shadow: inset 0 -0.1rem 0 0 hsla(0, 0%, 100%, 0.1);
-
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(5px);
-
-  .middle{
-    opacity: 0;
-  }
-
-  .right .options{
-    opacity: 0;
-  }
-}
